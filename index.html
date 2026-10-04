@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mason64 — House of Chess</title>
+<meta name="description" content="Handcrafted walnut and oak chess boards with lacquered Staunton pieces. Made in India.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@300;400;500;600&display=swap">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js"
+  }
+}
+</script>
+<script type="module" src="chess-scene.js"></script>
+<style>
+  body { margin: 0; background: var(--color-bg); }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent); }
+</style>
+</head>
+<body>
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body)">
+
+  <nav class="nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; background: color-mix(in srgb, var(--color-bg) 82%, transparent); backdrop-filter: blur(10px)">
+    <span class="nav-brand" style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.01em">Mason64</span>
+    <div style="display: flex; align-items: center; gap: 28px; font-size: 14px; letter-spacing: 0.02em">
+      <a href="#craft">Craft</a>
+      <a href="#pieces">Pieces</a>
+      <a href="#collection">Collection</a>
+      <a class="btn btn-primary" href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20your%20chess%20boards." target="_blank" rel="noopener" style="border-radius: 999px; padding: 9px 20px">WhatsApp us</a>
+    </div>
+  </nav>
+
+  <section data-scroll-track="true" style="position: relative; height: 420vh">
+    <div style="position: sticky; top: 0; height: 100vh; width: 100%">
+      <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 62% 34%, var(--color-neutral-100) 0%, var(--color-bg) 55%, var(--color-neutral-200) 100%)"></div>
+      <chess-scene style="position: absolute; inset: 0"></chess-scene>
+    </div>
+
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 100vh; display: flex; align-items: center; pointer-events: none">
+      <div style="padding: 0 40px; max-width: 640px">
+        <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 20px">Mason64 — House of Chess</div>
+        <h1 style="font-size: clamp(46px, 6vw, 88px); line-height: 1.02; margin: 0 0 24px; text-wrap: balance">A board you'll still be playing on in forty years.</h1>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 460px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Walnut and oak boards, cut and finished by hand. Pieces turned on a lathe and lacquered until they hold the light. Made in India.</p>
+        <div style="display: flex; gap: 12px; margin-top: 28px; pointer-events: auto">
+          <a class="btn btn-primary" href="#collection" style="border-radius: 999px; padding: 13px 26px; font-size: 15px">See the collection</a>
+          <a class="btn btn-secondary" href="#craft" style="border-radius: 999px; padding: 13px 26px; font-size: 15px">How it's made</a>
+        </div>
+        <div style="margin-top: 44px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent)">Scroll — the board comes up to meet you</div>
+      </div>
+    </div>
+
+    <div style="position: absolute; top: 140vh; left: 0; right: 0; height: 100vh; display: flex; align-items: center; justify-content: flex-end; pointer-events: none">
+      <div style="padding: 0 40px; max-width: 420px; text-align: right">
+        <h2 style="font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; margin: 0 0 16px">Walnut dark. Oak light. Brass between.</h2>
+        <p style="font-size: 16px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 72%, transparent)">Sixty-four squares, each one cut from a single board so the grain runs true across the whole playing field.</p>
+      </div>
+    </div>
+
+    <div style="position: absolute; top: 280vh; left: 0; right: 0; height: 100vh; display: flex; align-items: center; pointer-events: none">
+      <div style="padding: 0 40px; max-width: 400px">
+        <h2 style="font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; margin: 0 0 16px">Nine coats of lacquer. One at a time.</h2>
+        <p style="font-size: 16px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 72%, transparent)">Every piece is turned, weighted with lead, felted underneath, then finished in gloss black or ivory.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="craft" style="padding: 120px 40px; max-width: 1180px; margin: 0 auto">
+    <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 28px">The materials</div>
+    <h2 style="font-size: clamp(34px, 4vw, 58px); line-height: 1.06; max-width: 780px; margin: 0 0 64px; text-wrap: balance">Two woods that have been arguing beautifully for centuries.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 18px">
+        <div style="height: 120px; border-radius: var(--radius-lg); background: linear-gradient(140deg, #5b3820, #3f2413)"></div>
+        <h3 style="font-size: 24px; margin: 0">American walnut</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 72%, transparent)">The dark squares and the frame. Close-grained, deep chocolate, and it darkens further with the years and the light in your room.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 18px">
+        <div style="height: 120px; border-radius: var(--radius-lg); background: linear-gradient(140deg, #e6cf9f, #c9ab74)"></div>
+        <h3 style="font-size: 24px; margin: 0">White oak</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 72%, transparent)">The light squares. Quarter-sawn so the ray fleck catches across the board, and hard enough to take a lifetime of pieces set down firmly.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 18px">
+        <div style="height: 120px; border-radius: var(--radius-lg); background: linear-gradient(140deg, #dc9a5c, #a05a24)"></div>
+        <h3 style="font-size: 24px; margin: 0">Brass inlay</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 72%, transparent)">A single line of brass laid between the playing field and the frame. It is the only ornament on the board, and it is enough.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pieces" style="background: var(--color-surface); padding: 120px 40px">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 72px; align-items: start">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 28px">The pieces</div>
+        <h2 style="font-size: clamp(34px, 4vw, 58px); line-height: 1.06; margin: 0 0 24px; text-wrap: balance">Staunton proportions, cut a little cleaner.</h2>
+        <p style="font-size: 16px; line-height: 1.7; max-width: 460px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">The classical silhouette every player already knows, with the fussier turnings taken out. Weighted, felted, and lacquered in gloss black or ivory. A king that sits properly in the hand and refuses to tip.</p>
+        <p style="font-size: 16px; line-height: 1.7; max-width: 460px; color: color-mix(in srgb, var(--color-text) 74%, transparent)">Thirty-four pieces to a set — two spare queens, because promotions happen.</p>
+      </div>
+      <table class="table" style="width: 100%">
+        <thead><tr><th style="text-align: left">Piece</th><th style="text-align: left">Height</th><th style="text-align: left">Base</th></tr></thead>
+        <tbody>
+          <tr><td>King</td><td>107 mm</td><td>41 mm</td></tr>
+          <tr><td>Queen</td><td>104 mm</td><td>39 mm</td></tr>
+          <tr><td>Bishop</td><td>88 mm</td><td>34 mm</td></tr>
+          <tr><td>Knight</td><td>72 mm</td><td>34 mm</td></tr>
+          <tr><td>Rook</td><td>56 mm</td><td>34 mm</td></tr>
+          <tr><td>Pawn</td><td>53 mm</td><td>29 mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="collection" style="padding: 120px 40px; max-width: 1180px; margin: 0 auto">
+    <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 28px">The collection</div>
+    <h2 style="font-size: clamp(34px, 4vw, 58px); line-height: 1.06; max-width: 720px; margin: 0 0 64px">Three boards. One is yours.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+
+      <div class="card" style="border-radius: var(--radius-lg); padding: 34px; display: flex; flex-direction: column; gap: 14px; background: var(--color-neutral-100); color: var(--color-text); box-shadow: var(--shadow-md)">
+        <div class="card-kicker" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6">Entry</div>
+        <h3 style="font-size: 30px; margin: 0">Chowk</h3>
+        <div style="font-family: var(--font-heading); font-size: 22px">₹18,000</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.78">Solid walnut and oak, 45 cm board, weighted pieces in gloss black and ivory.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 14px; opacity: 0.8">
+          <div>45 cm playing field</div>
+          <div>80 mm king</div>
+          <div>Cotton drawstring bags</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20the%20Chowk%20board%20(%E2%82%B918%2C000)." target="_blank" rel="noopener" style="border-radius: 999px; padding: 12px 24px; margin-top: 18px; align-self: flex-start; background: var(--color-accent); color: var(--color-bg)">Enquire on WhatsApp</a>
+      </div>
+
+      <div class="card" style="border-radius: var(--radius-lg); padding: 34px; display: flex; flex-direction: column; gap: 14px; background: var(--color-neutral-100); color: var(--color-text); box-shadow: var(--shadow-md)">
+        <div class="card-kicker" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6">The everyday board</div>
+        <h3 style="font-size: 30px; margin: 0">Meridian</h3>
+        <div style="font-family: var(--font-heading); font-size: 22px">₹45,000</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.78">A larger field, brass inlay, and a hardwood case that holds the set upright on a shelf.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 14px; opacity: 0.8">
+          <div>50 cm playing field</div>
+          <div>95 mm king</div>
+          <div>Walnut storage case</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20the%20Meridian%20board%20(%E2%82%B945%2C000)." target="_blank" rel="noopener" style="border-radius: 999px; padding: 12px 24px; margin-top: 18px; align-self: flex-start; background: var(--color-accent); color: var(--color-bg)">Enquire on WhatsApp</a>
+      </div>
+
+      <div class="card" style="border-radius: var(--radius-lg); padding: 34px; display: flex; flex-direction: column; gap: 14px; background: var(--color-accent-900); color: var(--color-neutral-100); box-shadow: var(--shadow-md)">
+        <div class="card-kicker" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6">Flagship</div>
+        <h3 style="font-size: 30px; margin: 0">Regent</h3>
+        <div style="font-family: var(--font-heading); font-size: 22px">₹1,20,000</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.78">Quarter-sawn oak, hand-cut brass line, double-weighted pieces and two spare queens.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 14px; opacity: 0.8">
+          <div>55 cm playing field</div>
+          <div>107 mm king</div>
+          <div>Fitted case, felt-lined</div>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20the%20Regent%20board%20(%E2%82%B91%2C20%2C000)." target="_blank" rel="noopener" style="border-radius: 999px; padding: 12px 24px; margin-top: 18px; align-self: flex-start; background: var(--color-neutral-100); color: var(--color-accent-900)">Enquire on WhatsApp</a>
+      </div>
+
+    </div>
+    <p style="margin-top: 32px; font-size: 13px; color: color-mix(in srgb, var(--color-text) 55%, transparent)">Prices include GST and delivery anywhere in India. Made to order; six to nine weeks.</p>
+  </section>
+
+  <section id="waitlist" style="padding: 100px 40px 120px; max-width: 1180px; margin: 0 auto">
+    <div style="border-radius: var(--radius-lg); background: var(--color-accent-900); color: var(--color-neutral-100); padding: 64px 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: center">
+      <div>
+        <h2 style="font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; margin: 0 0 14px">Each run is forty boards.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; opacity: 0.75">Leave your email and we'll write to you when the next one goes on the bench. No other mail, ever.</p>
+        <a href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20your%20chess%20boards." target="_blank" rel="noopener" style="display: inline-block; margin-top: 18px; font-size: 15px; color: var(--color-accent-300); border-bottom: 1px solid color-mix(in srgb, var(--color-accent-300) 50%, transparent)">Or message us on WhatsApp — +91 95495 51895</a>
+      </div>
+      <form id="waitlist-form" style="display: flex; gap: 10px; flex-wrap: wrap">
+        <input class="input" type="email" required placeholder="you@email.com" style="flex: 1; min-width: 200px; border-radius: 999px; padding: 14px 20px; border: 1px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent); background: transparent; color: var(--color-neutral-100); font-family: var(--font-body); font-size: 15px">
+        <button class="btn btn-primary" type="submit" style="border-radius: 999px; padding: 14px 26px; font-size: 15px">Join the list</button>
+      </form>
+    </div>
+  </section>
+
+  <footer style="padding: 56px 40px; border-top: 1px solid var(--color-divider); display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; font-size: 13px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">
+    <span style="font-family: var(--font-heading); font-size: 18px; color: var(--color-text)">Mason64</span>
+    <div style="display: flex; gap: 28px">
+      <a href="#craft">Craft</a>
+      <a href="#collection">Collection</a>
+      <a href="https://wa.me/919549551895?text=Hello%20Mason64%20%E2%80%94%20I'd%20like%20to%20enquire%20about%20your%20chess%20boards." target="_blank" rel="noopener">WhatsApp +91 95495 51895</a>
+    </div>
+    <span>Made in India</span>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('waitlist-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.target.querySelector('button').textContent = 'Thank you';
+  });
+</script>
+</body>
+</html>
